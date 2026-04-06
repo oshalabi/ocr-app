@@ -1,0 +1,1 @@
+"""InvoiceShelf OCR sidecar package."""

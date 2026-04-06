@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "invoice-ocr-service"
+version = "0.1.0"
+description = "Standalone FastAPI microservice for extracting structured fields from invoice and receipt images/PDFs"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.135.2",
+    "invoice2data==0.4.5",
+    "python-multipart==0.0.22",
+    "setuptools==80.9.0",
+    "uvicorn==0.41.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "httpx==0.28.1",
+    "pytest==8.3.5",
+]
+
+[tool.setuptools.packages.find]
+include = ["ocr_service*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--tb=short -q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

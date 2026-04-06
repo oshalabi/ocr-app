@@ -1,0 +1,5 @@
+Demo Leverancier B.V.
+KvK 12345678
+Factuurnummer: DEMO-2026-0042
+Factuurdatum: 02-04-2026
+Totaal incl. btw: EUR 123,45

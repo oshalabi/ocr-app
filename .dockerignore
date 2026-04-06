@@ -1,0 +1,34 @@
+# Git
+.git/
+.github/
+.gitignore
+
+# Environments
+.env
+.env.*
+env/
+venv/
+.venv/
+
+# Cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+.nox/
+.tox/
+
+# Project files (Not needed in Prod container)
+tests/
+scripts/
+AGENTS.md
+README.md
+pyproject.toml
+
+# IDEs
+.vscode/
+.idea/
+.claude/
