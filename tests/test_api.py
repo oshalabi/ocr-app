@@ -5,7 +5,7 @@ from fastapi.testclient import TestClient
 
 from ocr_service import main
 from ocr_service import logger as logger_module
-from ocr_service.main import ocr_service
+from ocr_service.main import app
 
 # Module-level client — stateless, safe to share across tests in this module.
 # Tests that need isolation (e.g. auth env vars) still work because monkeypatch
