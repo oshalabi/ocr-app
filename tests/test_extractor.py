@@ -101,6 +101,7 @@ def test_extract_returns_searchable_match_without_ocr_fallback(
 
     monkeypatch.setattr(extractor, "_run_invoice2data", fake_run_invoice2data)
     monkeypatch.setattr(extractor, "_extract_ocr_text", fail_if_ocr_runs)
+    monkeypatch.setattr(extractor, "_load_input_text", lambda *_args, **_kwargs: "")
 
     response = extractor.extract(invoice_path, country_code="NL")
 
