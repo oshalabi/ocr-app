@@ -12,7 +12,7 @@ from ocr_service.main import ocr_service
 @pytest.fixture(scope="session")
 def client() -> TestClient:
     """A single TestClient instance reused across the whole test session."""
-    return TestClient(app)
+    return TestClient(ocr_service)
 
 
 @pytest.fixture()
