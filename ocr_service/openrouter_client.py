@@ -49,7 +49,7 @@ class OpenRouterClient:
         self.require_zdr = self._env_flag("OPENROUTER_REQUIRE_ZDR", default=False)
         self.disable_reasoning = self._env_flag("OPENROUTER_DISABLE_REASONING", default=False)
         self.http_referer = os.getenv("OPENROUTER_HTTP_REFERER", "")
-        self.app_name = os.getenv("OPENROUTER_APP_NAME", "InvoiceShelf OCR")
+        self.app_name = os.getenv("OPENROUTER_APP_NAME", "Example OCR")
         self.pdf_engine = os.getenv("OPENROUTER_PDF_ENGINE", NO_PLUGIN_PDF_ENGINE).strip().lower()
         self.rate_limit_retries = self._env_int("OPENROUTER_RATE_LIMIT_RETRIES", DEFAULT_RATE_LIMIT_RETRIES)
         self.rate_limit_backoff_ms = self._env_int("OPENROUTER_RATE_LIMIT_BACKOFF_MS", DEFAULT_RATE_LIMIT_BACKOFF_MS)
