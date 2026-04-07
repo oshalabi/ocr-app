@@ -6,13 +6,13 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 
-from ocr_service.main import ocr_service
+from ocr_service.main import app
 
 
 @pytest.fixture(scope="session")
 def client() -> TestClient:
     """A single TestClient instance reused across the whole test session."""
-    return TestClient(ocr_service)
+    return TestClient(app)
 
 
 @pytest.fixture()
