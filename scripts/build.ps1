@@ -21,7 +21,7 @@ param(
     [string]$Registry = ""
 )
 
-function Load-Env($File) {
+function Import-Env($File) {
     if (Test-Path $File) {
         Get-Content $File | Where-Object { $_ -match '^\s*([^#=]+)\s*=\s*(.*)' } | ForEach-Object {
             $val = $Matches[2].Trim()
@@ -30,8 +30,8 @@ function Load-Env($File) {
         }
     }
 }
-Load-Env ".env"
-Load-Env ".env.local"
+Import-Env ".env"
+Import-Env ".env.local"
 
 $ImageName = if ($env:IMAGE) { $env:IMAGE } else { "ocr-sidecar" }
 $Push = if ($env:PUSH) { $env:PUSH } else { "0" }

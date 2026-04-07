@@ -22,7 +22,7 @@ param(
     [string[]]$AdditionalDockerArgs
 )
 
-function Load-Env($File) {
+function Import-EnvFile($File) {
     if (Test-Path $File) {
         Get-Content $File | Where-Object { $_ -match '^\s*([^#=]+)\s*=\s*(.*)' } | ForEach-Object {
             $val = $Matches[2].Trim()
@@ -31,8 +31,8 @@ function Load-Env($File) {
         }
     }
 }
-Load-Env ".env"
-Load-Env ".env.local"
+Import-EnvFile ".env"
+Import-EnvFile ".env.local"
 
 if (-not $PSBoundParameters.ContainsKey('Image') -and $env:IMAGE) { $Image = $env:IMAGE }
 if (-not $PSBoundParameters.ContainsKey('Port') -and $env:PORT) { $Port = $env:PORT }
