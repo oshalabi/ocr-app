@@ -6,7 +6,7 @@ from pathlib import Path
 import pytest
 from fastapi.testclient import TestClient
 
-from ocr_service.main import ocr_service
+from ocr_service.main import app
 
 
 @pytest.fixture(scope="session")

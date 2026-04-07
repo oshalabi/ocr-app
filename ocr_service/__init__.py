@@ -1,1 +1,1 @@
-"""Example OCR sidecar package."""
+"""Example OCR sidecar service."""
