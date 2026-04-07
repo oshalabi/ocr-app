@@ -1,0 +1,13 @@
+issuer: Demo Leverancier B.V.
+keywords:
+  - Demo\s+Leverancier\s+B\.V\.
+  - KvK\s+12345678
+fields:
+  invoice_number: Factuurnummer:\s*([A-Z0-9-]+)
+  date: Factuurdatum:\s*([0-9]{2}-[0-9]{2}-[0-9]{4})
+  amount: Totaal\s+incl\.\s+btw:\s*EUR\s*([0-9\.,]+)
+  currency_code: Totaal\s+incl\.\s+btw:\s*(EUR)
+options:
+  date_formats:
+    - "%d-%m-%Y"
+  remove_whitespace: true
